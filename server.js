@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
+console.log("DEBUG ADDITION: env mongodb uri: " + process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
 // Start the API server
